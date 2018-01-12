@@ -1,0 +1,14 @@
+table{
+	border:1px solid green;
+	 border-collapse:collapse;
+}
+
+table  th{
+	border:1px solid green;
+	min-width: 50px;
+	
+}
+
+table  td{
+	border:1px solid green;
+}
