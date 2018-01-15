@@ -1,9 +1,0 @@
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\DataProvider.dll.config
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\DataProvider.dll
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\DataProvider.pdb
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\EntityFramework.dll
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\EntityFramework.SqlServer.dll
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\EntityFramework.xml
-E:\Test\TesApiHtml\Api\DataProvider\bin\Debug\EntityFramework.SqlServer.xml
-E:\Test\TesApiHtml\Api\DataProvider\obj\Debug\DataProvider.dll
-E:\Test\TesApiHtml\Api\DataProvider\obj\Debug\DataProvider.pdb

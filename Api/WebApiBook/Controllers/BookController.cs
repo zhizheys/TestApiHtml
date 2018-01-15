@@ -8,16 +8,39 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Web;
 using System.Web.Http;
+using BaseWeb;
 
 namespace WebApiBook.Controllers
 {
-    public class BookController : ApiController
+    public class BookController : BaseApiController
     {
 
         [HttpGet]
         public HttpResponseMessage GetAllBook()
         {
+            string bookId = "book@shenzhen.com";
+            string cookieName = "BookId";
+
+            HttpCookie cookie = HttpContext.Current.Request.Cookies[cookieName];
+
+            if (cookie == null)
+            {
+                cookie = new HttpCookie(cookieName);
+            }
+
+            cookie.Value = bookId;
+            cookie.Expires = DateTime.Now.AddMinutes(10);
+            cookie.Path = "/";
+            HttpContext.Current.Response.Cookies.Add(cookie);
+
+            string userId = "UId";
+            HttpCookie cookieUser = HttpContext.Current.Request.Cookies[userId];
+            string cookieUserValue = cookieUser.Value;
+
+
+
             List<Book> BookList = new List<Book>();
 
             using (var db = new TestDBContext())
@@ -27,7 +50,7 @@ namespace WebApiBook.Controllers
 
             ApiResultViewModel result = new ApiResultViewModel();
             result.ApiResultCode = (int)ApiResultEnum.Success;
-            result.Message = "";
+            result.Message = string.Format("cookie name {0},cookie value {1}", userId, cookieUserValue);
             result.Data = BookList;
 
             string jsonStr = JsonConvert.SerializeObject(result);

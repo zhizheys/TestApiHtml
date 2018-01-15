@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProvider", "DataProvide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiBook", "WebApiBook\WebApiBook.csproj", "{19F300C2-5BB3-4CDA-9B6D-0C0AB978616C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiAuthentication", "WebApiAuthentication\WebApiAuthentication.csproj", "{A6BF0EE3-5BC2-4BB1-A2E0-7CB1CB2D0DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseWeb", "BaseWeb\BaseWeb.csproj", "{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +33,20 @@ Global
 		{19F300C2-5BB3-4CDA-9B6D-0C0AB978616C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F300C2-5BB3-4CDA-9B6D-0C0AB978616C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F300C2-5BB3-4CDA-9B6D-0C0AB978616C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BF0EE3-5BC2-4BB1-A2E0-7CB1CB2D0DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BF0EE3-5BC2-4BB1-A2E0-7CB1CB2D0DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BF0EE3-5BC2-4BB1-A2E0-7CB1CB2D0DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BF0EE3-5BC2-4BB1-A2E0-7CB1CB2D0DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F312029E-B23D-4E12-9294-EFD896426691} = {E38FAC34-060C-4C47-9CFC-771F71D57ECA}
+		{F9B11B4D-CCD0-40CC-9A30-EE5C60F5DC4F} = {E38FAC34-060C-4C47-9CFC-771F71D57ECA}
 	EndGlobalSection
 EndGlobal
