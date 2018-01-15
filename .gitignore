@@ -1,1 +1,7 @@
 /Api/packages
+/Api/DataProvider/bin
+/Api/DataProvider/obj
+/Api/WebApiBook/bin
+/Api/WebApiBook/obj
+/Api/WebApiProcess/bin
+/Api/WebApiProcess/obj
