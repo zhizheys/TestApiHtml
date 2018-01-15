@@ -18,5 +18,6 @@ namespace DataProvider.DataBase
         public string UserName { get; set; }
         public Nullable<byte> UserAge { get; set; }
         public string UserAddress { get; set; }
+        public string UserPassword { get; set; }
     }
 }

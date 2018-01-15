@@ -152,6 +152,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BaseWeb\BaseWeb.csproj">
+      <Project>{f9b11b4d-ccd0-40cc-9a30-ee5c60f5dc4f}</Project>
+      <Name>BaseWeb</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataProvider\DataProvider.csproj">
       <Project>{f312029e-b23d-4e12-9294-efd896426691}</Project>
       <Name>DataProvider</Name>
