@@ -10,9 +10,10 @@ namespace DataProvider
     public enum ApiResultEnum
     {
         Success = 2200,
-        Error = 2400,
+        Error = 2503,
         NoLogin =2500,
-        NoPermission=2600
+        NoPermission=2401,
+        NotFound = 2404
     }
 
 }

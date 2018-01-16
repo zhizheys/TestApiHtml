@@ -38,8 +38,13 @@ namespace WebApiProcess.Controllers
             HttpContext.Current.Response.Cookies.Add(cookie);
 
             string bookId = "BookId";
+            string cookieBookValue = string.Empty;
             HttpCookie cookieBook = HttpContext.Current.Request.Cookies[bookId];
-            string cookieBookValue = cookieBook.Value;
+            if (cookieBook != null)
+            {
+                cookieBookValue = cookieBook.Value;
+            }
+
 
             List<User> userList = new List<User>();
 

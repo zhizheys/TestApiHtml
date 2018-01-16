@@ -37,9 +37,12 @@ namespace WebApiBook.Controllers
 
             string userId = "UId";
             HttpCookie cookieUser = HttpContext.Current.Request.Cookies[userId];
-            string cookieUserValue = cookieUser.Value;
+            string cookieUserValue = string.Empty;
 
-
+            if (cookieUser != null)
+            {
+                cookieUserValue = cookieUser.Value;
+            }
 
             List<Book> BookList = new List<Book>();
 
@@ -58,7 +61,7 @@ namespace WebApiBook.Controllers
             //HttpResponseMessage resultJson = new HttpResponseMessage { Content = new StringContent(jsonStr, Encoding.GetEncoding("UTF-8"), "application/json") };
             //return resultJson;
 
-            return CreateHttpResponseMessage((int)ApiResultEnum.Success,null,BookList);
+            return CreateHttpResponseMessage((int)ApiResultEnum.Success, null, BookList);
 
         }
 

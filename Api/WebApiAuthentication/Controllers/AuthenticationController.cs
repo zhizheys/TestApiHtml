@@ -18,9 +18,8 @@ namespace WebApiAuthentication.Controllers
     {
         [AllowAnonymous]
         [HttpPost]
-        public HttpResponseMessage Login(JObject data)
+        public HttpResponseMessage Login(UserViewModel user)
         {
-            UserViewModel user = JsonConvert.DeserializeObject<UserViewModel>(data["UserInfo"].ToString());
             string userId = user.UserId;
             string userPassword = user.UserPassword;
             User findUser;
