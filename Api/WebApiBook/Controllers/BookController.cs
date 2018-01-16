@@ -48,15 +48,17 @@ namespace WebApiBook.Controllers
                 BookList = db.Book.OrderBy(p => p.Id).ToList();
             }
 
-            ApiResultViewModel result = new ApiResultViewModel();
-            result.ApiResultCode = (int)ApiResultEnum.Success;
-            result.Message = string.Format("cookie name {0},cookie value {1}", userId, cookieUserValue);
-            result.Data = BookList;
+            //ApiResultViewModel result = new ApiResultViewModel();
+            //result.ApiResultCode = (int)ApiResultEnum.Success;
+            //result.Message = string.Format("cookie name {0},cookie value {1}", userId, cookieUserValue);
+            //result.Data = BookList;
 
-            string jsonStr = JsonConvert.SerializeObject(result);
+            //string jsonStr = JsonConvert.SerializeObject(result);
 
-            HttpResponseMessage resultJson = new HttpResponseMessage { Content = new StringContent(jsonStr, Encoding.GetEncoding("UTF-8"), "application/json") };
-            return resultJson;
+            //HttpResponseMessage resultJson = new HttpResponseMessage { Content = new StringContent(jsonStr, Encoding.GetEncoding("UTF-8"), "application/json") };
+            //return resultJson;
+
+            return CreateHttpResponseMessage((int)ApiResultEnum.Success,null,BookList);
 
         }
 

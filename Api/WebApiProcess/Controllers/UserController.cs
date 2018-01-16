@@ -38,10 +38,8 @@ namespace WebApiProcess.Controllers
             HttpContext.Current.Response.Cookies.Add(cookie);
 
             string bookId = "BookId";
-           HttpCookie cookieBook = HttpContext.Current.Request.Cookies[bookId];
+            HttpCookie cookieBook = HttpContext.Current.Request.Cookies[bookId];
             string cookieBookValue = cookieBook.Value;
-
-
 
             List<User> userList = new List<User>();
 
@@ -50,15 +48,9 @@ namespace WebApiProcess.Controllers
                 userList = db.User.OrderBy(p => p.UserId).ToList();
             }
 
-            ApiResultViewModel result = new ApiResultViewModel();
-            result.ApiResultCode = (int)ApiResultEnum.Success;
-            result.Message = string.Format("cookie name {0},cookie value {1}", bookId,cookieBookValue);
-            result.Data = userList;
+            string message = string.Format("cookie name {0},cookie value {1}", bookId, cookieBookValue);
 
-            string jsonStr = JsonConvert.SerializeObject(result);
-
-            HttpResponseMessage resultJson = new HttpResponseMessage { Content = new StringContent(jsonStr, Encoding.GetEncoding("UTF-8"), "application/json") };
-            return resultJson;
+            return CreateHttpResponseMessage((int)ApiResultEnum.Success, message, userList);
 
         }
 
